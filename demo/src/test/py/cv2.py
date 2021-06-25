@@ -29,7 +29,7 @@ while (True):
             cv2.rectangle(face_area, (ex, ey), (ex + ew, ey + eh), (0, 255, 0), 1)
 
         ## 微笑检测
-        # 用微笑级联分类器引擎在人脸区域进行人眼识别，返回的eyes为眼睛坐标列表
+        # 用微笑级联分类器引擎在人脸区域进行人眼识别，返回的eyes为眼睛坐标列表【
         smiles = smile_cascade.detectMultiScale(face_area, scaleFactor=1.16, minNeighbors=65, minSize=(25, 25),
                                                 flags=cv2.CASCADE_SCALE_IMAGE)
         for (ex, ey, ew, eh) in smiles:
